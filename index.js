@@ -26,6 +26,10 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use('/farmer', farmer);
 app.use('/user', user);
 
+app.get("/", (req, res) => {
+    res.send("All Okay");
+})
+
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`);
 })
