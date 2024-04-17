@@ -6,7 +6,7 @@ const user = require('./controller/userController');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGODB_URI)
 .then(res => console.log('Connected to database'))
 .catch(err => console.log(err));
 
