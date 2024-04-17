@@ -71,4 +71,9 @@ router.post("/buy/:productId", async(req, res) => {
 
 })
 
+router.get("/all", async(req, res) => {
+    let allUser = await User.find({});
+    res.send(allUser);
+})
+
 module.exports = router;
